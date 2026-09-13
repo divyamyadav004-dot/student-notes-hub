@@ -34,16 +34,80 @@
         </div>
       </section>
 
-      <section class="section">
+      <!-- Homepage search bar (UI only; search behavior can be added later) -->
+      <section class="section home-search-section">
+        <div class="container">
+          <div class="home-search-wrap">
+            <label class="sr-only" for="homepage-search">Search notes and topics</label>
+            <input
+              id="homepage-search"
+              type="search"
+              placeholder="Search notes, PYQs, topics..."
+              aria-label="Search notes, PYQs, topics"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Scribd-inspired browse tiles -->
+      <section class="section section-compact">
         <div class="container">
           <h2>Select Your Class or Exam</h2>
-          <div class="grid cols-3">
-            <article class="card"><h3>Class 9</h3><p>Chapter-wise notes and practice PDFs.</p></article>
-            <article class="card"><h3>Class 10</h3><p>Concept notes, PYQs, and key topic lists.</p></article>
-            <article class="card"><h3>Class 11</h3><p>Foundation resources for boards and entrances.</p></article>
-            <article class="card"><h3>Class 12</h3><p>Board-focused notes and high-yield revision.</p></article>
-            <article class="card"><h3>JEE</h3><p>Physics, Chemistry, Maths prep materials.</p></article>
-            <article class="card"><h3>NEET</h3><p>Physics, Chemistry, Biology focused resources.</p></article>
+          <div class="home-class-grid">
+            <article class="card class-tile accent-cyan">
+              <span class="tile-icon" aria-hidden="true">📘</span>
+              <h3>Class 9</h3>
+              <p>Chapter-wise notes and practice PDFs.</p>
+            </article>
+            <article class="card class-tile accent-indigo">
+              <span class="tile-icon" aria-hidden="true">🧮</span>
+              <h3>Class 10</h3>
+              <p>Concept notes, PYQs, and key topic lists.</p>
+            </article>
+            <article class="card class-tile accent-blue">
+              <span class="tile-icon" aria-hidden="true">🧪</span>
+              <h3>Class 11</h3>
+              <p>Foundation resources for boards and entrances.</p>
+            </article>
+            <article class="card class-tile accent-teal">
+              <span class="tile-icon" aria-hidden="true">📗</span>
+              <h3>Class 12</h3>
+              <p>Board-focused notes and high-yield revision.</p>
+            </article>
+            <article class="card class-tile accent-gold">
+              <span class="tile-icon" aria-hidden="true">⚛️</span>
+              <h3>JEE</h3>
+              <p>Physics, Chemistry, Maths prep materials.</p>
+            </article>
+            <article class="card class-tile accent-green">
+              <span class="tile-icon" aria-hidden="true">🧬</span>
+              <h3>NEET</h3>
+              <p>Physics, Chemistry, Biology focused resources.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document preview style cards -->
+      <section class="section section-compact">
+        <div class="container">
+          <h2>Popular Right Now</h2>
+          <div class="home-feature-grid">
+            <article class="card feature-card">
+              <span class="feature-tag">Physics</span>
+              <h3>Class 12 Electrostatics Quick Notes</h3>
+              <p>Concise formula sheet and concept map for revision before school and entrance tests.</p>
+            </article>
+            <article class="card feature-card">
+              <span class="feature-tag">Mathematics</span>
+              <h3>JEE Limits &amp; Continuity PYQs</h3>
+              <p>Handpicked previous year questions grouped by difficulty and common exam patterns.</p>
+            </article>
+            <article class="card feature-card">
+              <span class="feature-tag">Biology</span>
+              <h3>NEET Human Physiology Important Topics</h3>
+              <p>Topic-wise high-yield notes with key definitions and quick recall checkpoints.</p>
+            </article>
           </div>
         </div>
       </section>

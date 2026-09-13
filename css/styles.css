@@ -95,8 +95,24 @@ body {
   color: var(--muted);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .section {
   padding: 1.3rem 0 2.2rem;
+}
+
+.section-compact {
+  padding-top: 0.5rem;
 }
 
 .section h2 {
@@ -130,6 +146,116 @@ body {
 .card h4 {
   margin-top: 0;
   color: var(--primary-dark);
+}
+
+/* Homepage redesign: search and document-library inspired tiles */
+.home-search-section {
+  padding-top: 0;
+}
+
+.home-search-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.home-search-wrap input {
+  border: 1px solid #bfdbfe;
+  background: var(--white);
+  border-radius: 999px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.home-search-wrap input:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.home-class-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.class-tile {
+  position: relative;
+  border-left: 4px solid transparent;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.tile-icon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eff6ff;
+  margin-bottom: 0.35rem;
+}
+
+.class-tile h3 {
+  margin-bottom: 0.35rem;
+}
+
+.class-tile p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.accent-cyan {
+  border-left-color: #06b6d4;
+}
+
+.accent-indigo {
+  border-left-color: #6366f1;
+}
+
+.accent-blue {
+  border-left-color: #3b82f6;
+}
+
+.accent-teal {
+  border-left-color: #0d9488;
+}
+
+.accent-gold {
+  border-left-color: #ca8a04;
+}
+
+.accent-green {
+  border-left-color: #16a34a;
+}
+
+.home-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature-card {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.feature-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.03rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.feature-tag {
+  display: inline-block;
+  background: #e0ebff;
+  color: var(--primary-dark);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .list {
@@ -226,6 +352,26 @@ textarea {
 @media (max-width: 900px) {
   .grid.cols-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .home-class-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .home-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-class-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .home-feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
