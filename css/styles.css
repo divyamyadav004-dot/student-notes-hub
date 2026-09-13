@@ -214,6 +214,17 @@ h4 {
   gap: 0.95rem;
 }
 
+.class-tile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.class-tile-link:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
 .class-tile {
   position: relative;
   border-left: 4px solid var(--accent);
